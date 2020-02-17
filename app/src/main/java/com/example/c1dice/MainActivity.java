@@ -31,7 +31,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void RollDice(){
-        int rand = new Random().nextInt(6) + 1;
+        SetEyes(die);
+        /*int rand = new Random().nextInt(6) + 1;
         if (rand == 1){
             die.setImageResource(R.drawable.dice1);
         } else if (rand == 2){
@@ -44,6 +45,30 @@ public class MainActivity extends AppCompatActivity {
             die.setImageResource(R.drawable.dice5);
         } else if (rand == 6){
             die.setImageResource(R.drawable.dice6);
+        }*/
+    }
+
+    private void SetEyes(ImageView die){
+        int rand = new Random().nextInt(6) + 1;
+        switch (rand) {
+            case 1:
+                die.setImageResource(R.drawable.dice1);
+                break;
+            case 2:
+                die.setImageResource(R.drawable.dice2);
+                break;
+            case 3:
+                die.setImageResource(R.drawable.dice3);
+                break;
+            case 4:
+                die.setImageResource(R.drawable.dice4);
+                break;
+            case 5:
+                die.setImageResource(R.drawable.dice5);
+                break;
+            case 6:
+                die.setImageResource(R.drawable.dice6);
+                break;
         }
     }
 }
